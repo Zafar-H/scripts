@@ -1,0 +1,37 @@
+PRG_HOME=java/Sample
+
+LOG4J_FILE_NAME=log4j-1.2.17.jar
+INPUT_FILE_NAME_1=system.dat
+INPUT_FILE_NAME_2=testMultiplication.dat
+LOG4J_PROPERTY_FILE_NAME=log4j.properties
+
+DATA_DIR=$HOME/$PRG_HOME/data
+
+INPUT_FILE_1=$DATA_DIR/$INPUT_FILE_NAME_1
+INPUT_FILE_2=$DATA_DIR/$INPUT_FILE_NAME_2
+LOGG$J_PROPERTY_FILE=$PRG_HOME/$LOG4J_PROPERTY_FILE_NAME
+
+
+JAVA_FILE_DIR=$HOME/$PRG_HOME
+JAVA_JAR_DIR=$HOME/$PRG_HOME
+LOG4J_JAR_FILE=$JAVA_JAR_DIR/$LOG4J_FILE_NAME
+
+JAVA=`which java`
+
+CLASSPATH=$CLASSPATH:$LOG4J_JAR_FILE
+PATH=$PATH:$JAVA_JAR_DIR
+
+export CLASSPATH
+echo "value of input file path is [$INPUT_FILE_1]"
+echo "value of output file path is [$INPUT_FILE_2]"
+
+echo "value of classpath is [$CLASSPATH]\n"
+echo "value of path is [$PATH]\n"
+#read
+
+$JAVA LinearArrayOperation $INPUT_FILE_1 $INPUT_FILE_2
+
+
+
+
+

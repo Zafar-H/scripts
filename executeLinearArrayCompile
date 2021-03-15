@@ -1,0 +1,15 @@
+PROGRAM_HOME=java/Sample
+
+JAVA_FILE_DIR=$HOME/$PROGRAM_HOME
+
+JAVAC=`which javac`
+
+CLASSPATH=$CLASSPATH
+PATH=$PATH
+
+export CLASSPATH
+
+echo "value of classpath is [$CLASSPATH]"
+echo "value of path is [$PATH]"
+
+$JAVAC $JAVA_FILE_DIR/LinearArrayMultiplication.java

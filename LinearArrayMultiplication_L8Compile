@@ -1,0 +1,24 @@
+
+
+PRG_HOME=java/Sample
+LOG4J_FILE_NAME=log4j-1.2.17.jar
+
+
+JAVA_FILE_DIR=$HOME/$PRG_HOME
+JAVA_JAR_DIR=$HOME/$PRG_HOME
+LOG4J_JAR_FILE=$JAVA_JAR_DIR/$LOG4J_FILE_NAME
+
+JAVAC=`which javac`
+
+CLASSPATH=$CLASSPATH:$LOG4J_JAR_FILE
+PATH=$PATH:$JAVA_JAR_DIR
+
+export CLASSPATH
+echo "value of classpath is [$CLASSPATH]\n"
+echo "value of path is [$PATH]\n"
+#read
+$JAVAC $JAVA_FILE_DIR/LinearArrayMultiplication_L8.java
+
+
+
+
